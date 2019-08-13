@@ -1,12 +1,12 @@
 function sayHello(name) {
-  let _name = name
+  const _name = name
   return () => {
     console.log('hello ', _name)
   }
 }
 
-let sayHelloToJun = sayHello('준')
-let sayHelloToYeong = sayHello('영')
+const sayHelloToJun = sayHello('준')
+const sayHelloToYeong = sayHello('영')
 sayHelloToJun()
 sayHelloToYeong()
 
