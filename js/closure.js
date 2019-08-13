@@ -26,6 +26,7 @@ console.log(vueData.getID())
 
 
 //IIFE
+//ref: http://chanlee.github.io/2013/12/10/understand-javascript-closure/
 function iife(userList) {
   let userID = 100
   for(let i = 0; i < userList.length; i++) {
