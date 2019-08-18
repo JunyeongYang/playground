@@ -56,3 +56,16 @@ let userList = [
 
 let t = iife(userList)
 console.log(t)
+
+
+const outer = function(out) {
+  return (inn) => {
+    return out + inn
+  }
+}
+
+const addFour = new outer(4)
+const addThree = new outer(3)
+
+console.log('addFour ', addFour(1))
+console.log('addThree', addThree(5))
