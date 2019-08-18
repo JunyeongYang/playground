@@ -57,7 +57,7 @@ let userList = [
 let t = iife(userList)
 console.log(t)
 
-
+// make new instance to use the function independently
 const outer = function(out) {
   return (inn) => {
     return out + inn
