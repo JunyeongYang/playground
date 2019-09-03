@@ -9,7 +9,7 @@
 //   console.log(global.a)
 // })
 
-const a = () => {
+const a1 = () => {
   var i
   for(i = 0; i < 10; i++) {
     ((a) => {
@@ -20,3 +20,11 @@ const a = () => {
 
 a()
 
+function a() {
+  var i
+  for(i = 0; i < 10; i++) {
+    ((a) => {
+      console.log(a)
+    })(i)
+  }
+}

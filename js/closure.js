@@ -31,9 +31,7 @@ function iife(userList) {
   let userID = 100
   for(let i = 0; i < userList.length; i++) {
     //즉시 호출된 함수 표현식(Immediately Invoked Function Expression. IIFE)
-    userList[i]["id"] = ((j) => {
-      return userID + j
-    })(i)
+    userList[i].id = ((j) => userID + j)(i)
   }
 
   return userList
@@ -69,3 +67,12 @@ const addThree = new outer(3)
 
 console.log('addFour ', addFour(1))
 console.log('addThree', addThree(5))
+
+
+
+function a() {
+  return {
+    data: '',
+    console: ''
+  }
+}
