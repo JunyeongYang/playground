@@ -76,3 +76,25 @@ function a() {
     console: ''
   }
 }
+
+function UserList2() {
+  const list = [
+    {
+      name: 'Austin',
+      pNo: '000-0000-000'
+    },
+    {
+      name: 'Billie',
+      pNo: '111-1111-1111'
+    }
+  ]
+  return {
+    getInfoByName: (name) => {
+      return list.filter(info => info.name === name)
+    }
+  }
+}
+
+const userList2 = new UserList2()
+
+console.log(userList2.getInfoByName('Austin'))
