@@ -35,4 +35,5 @@ console.log(_mapper(userList, (user) => user.name ));
 
 console.log(_mapper(_filter(userList, (user) => user.age >= 30), (user) => user.name));
 
-
+//기본 filter, map 사용
+console.log(userList.filter(user => user.age >= 30).map(user => user.name));
