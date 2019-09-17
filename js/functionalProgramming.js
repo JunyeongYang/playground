@@ -6,16 +6,33 @@ const userList = [
   {name: 'Jason', age: '39', phNo: '666-6666-6666'},
 ];
 
-function _filter(users, predi) {
-  const temp_userList = [];
-  for(let i = 0; i < users.length; i++) {
-    if(predi(users[i])) {
-      temp_userList.push(users[i]);
+function _filter(arr, predi) {
+  const tempArr = [];
+  for(let i = 0; i < arr.length; i++) {
+    if(predi(arr[i])) {
+      tempArr.push(arr[i]);
     }
   }
-  return temp_userList;
+  return tempArr;
 }
 
-console.log(_filter(userList, (user) => { return user.age >= 30 }));
+console.log(_filter(userList, (user) => user.age >= 30 ));
 console.log('-------');
-console.log(_filter(userList, (user) => { return user.age < 30 }));
+console.log(_filter(userList, (user) => user.age < 30 ));
+console.log('-------');
+console.log(_filter([1,2,3,4], (data) => data > 2 ));
+console.log('-------');
+
+function _mapper(arr, mapper) {
+  const tempArr = [];
+  for(let i = 0; i < arr.length; i++) {
+    tempArr.push(mapper(arr[i]));
+  }
+  return tempArr;
+}
+
+console.log(_mapper(userList, (user) => user.name ));
+
+console.log(_mapper(_filter(userList, (user) => user.age >= 30), (user) => user.name));
+
+
